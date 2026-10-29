@@ -11,7 +11,7 @@ import pickle
 import streamlit as st
 
 # loading the saved model
-loaded_model = pickle.load(open('medical_insurance_cost_predictor.sav', 'rb'))
+loaded_model = pickle.load(open('medical_insurance_cost_predictor.sav', 'rb'))  # noqa: S301 - Only load this locally generated model; never accept uploaded pickle files.
 
 #creating a function for Prediction
 def medical_insurance_cost_prediction(input_data):

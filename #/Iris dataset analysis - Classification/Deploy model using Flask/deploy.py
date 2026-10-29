@@ -3,7 +3,7 @@ import pickle
 
 app = Flask(__name__)
 # load the model
-model = pickle.load(open('savedmodel.sav', 'rb'))
+model = pickle.load(open('savedmodel.sav', 'rb'))  # noqa: S301 - Only load this locally generated model; never accept uploaded pickle files.
 
 @app.route('/')
 def home():
@@ -21,4 +21,4 @@ def predict():
     return render_template('index.html', **locals())
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
