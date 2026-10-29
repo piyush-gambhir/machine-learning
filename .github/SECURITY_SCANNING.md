@@ -9,6 +9,6 @@ Reviewed exceptions are limited to individual `pickle.load` calls for models gen
 these exercises (`S301`). Pickle can execute code: never replace those models with untrusted
 downloads or uploaded files. These exceptions do not permit deserializing network input.
 
-The tracked zero-byte `Face Recognition - Yale Face Database/face_recognition.ipynb` is
-excluded from Ruff because it contains no JSON notebook or code. Reassess that exclusion when
-it is populated. GitHub secret scanning remains enabled for recognized provider credentials.
+The former zero-byte `Face Recognition - Yale Face Database/face_recognition.ipynb` placeholder
+is now a valid empty notebook. It needs no exclusion, and future cells will be scanned normally.
+GitHub secret scanning remains enabled for recognized provider credentials.
