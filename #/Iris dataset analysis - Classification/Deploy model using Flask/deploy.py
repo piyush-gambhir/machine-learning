@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import pickle
 
 app = Flask(__name__)
-# load the model
+
 model = pickle.load(open('savedmodel.sav', 'rb'))  # noqa: S301 - Only load this locally generated model; never accept uploaded pickle files.
 
 @app.route('/')
